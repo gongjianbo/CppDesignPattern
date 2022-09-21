@@ -1,12 +1,12 @@
-//Strategy£¨²ßÂÔÄ£Ê½-¶ÔÏóĞĞÎªĞÍ£©
-//±ğÃûPolicy
-//¶¨ÒåÒ»ÏµÁĞµÄËã·¨£¬°ÑËüÃÇÒ»¸ö¸ö·â×°ÆğÀ´£¬²¢ÇÒÊ¹ËüÃÇ¿ÉÒÔÏà»¥Ìæ»»¡£
-//Ê¹µÃËã·¨¿É¶ÀÁ¢ÓÚÊ¹ÓÃËüµÄ¿Í»§¶ø±ä»¯¡£
+//Strategyï¼ˆç­–ç•¥æ¨¡å¼-å¯¹è±¡è¡Œä¸ºå‹ï¼‰
+//åˆ«åPolicy
+//å®šä¹‰ä¸€ç³»åˆ—çš„ç®—æ³•ï¼ŒæŠŠå®ƒä»¬ä¸€ä¸ªä¸ªå°è£…èµ·æ¥ï¼Œå¹¶ä¸”ä½¿å®ƒä»¬å¯ä»¥ç›¸äº’æ›¿æ¢ã€‚
+//ä½¿å¾—ç®—æ³•å¯ç‹¬ç«‹äºä½¿ç”¨å®ƒçš„å®¢æˆ·è€Œå˜åŒ–ã€‚
 #include <iostream>
 #include <string>
 #include <memory>
 
-//²ßÂÔ½Ó¿Ú
+//ç­–ç•¥æ¥å£
 class AbstractStrategy
 {
 public:
@@ -14,7 +14,7 @@ public:
 	virtual std::string doAlgorithm(const std::string& data) const = 0;
 };
 
-//ÉÏÏÂÎÄ³ÖÓĞ²ßÂÔÊµÀıÒıÓÃ
+//ä¸Šä¸‹æ–‡æŒæœ‰ç­–ç•¥å®ä¾‹å¼•ç”¨
 class Context
 {
 public:
@@ -38,7 +38,7 @@ private:
 	std::unique_ptr<AbstractStrategy> currentStrategy;
 };
 
-//¾ßÌå²ßÂÔA
+//å…·ä½“ç­–ç•¥A
 class ConcreteStrategyA : public AbstractStrategy
 {
 public:
@@ -48,7 +48,7 @@ public:
 	}
 };
 
-//¾ßÌå²ßÂÔB
+//å…·ä½“ç­–ç•¥B
 class ConcreteStrategyB : public AbstractStrategy
 {
 	std::string doAlgorithm(const std::string& data) const override {
@@ -57,7 +57,7 @@ class ConcreteStrategyB : public AbstractStrategy
 	}
 };
 
-//²âÊÔ
+//æµ‹è¯•
 static void testStrategyPattern()
 {
 	std::cout << "context set stategy ConcreteStrategyA" << std::endl;

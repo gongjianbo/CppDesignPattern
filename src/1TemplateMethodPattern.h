@@ -1,15 +1,15 @@
-//Template Method��ģ�巽��-����Ϊ�ͣ�
-//����һ�������е��㷨�ĹǼܣ�����һЩ�����ӳٵ������С�
-//Template Method ʹ��������Բ��ı�һ���㷨�Ľṹ�����ض�����㷨��ĳЩ�ض����衣
+//Template Method（模板方法-类行为型）
+//定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。
+//Template Method 使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。
 #include <iostream>
 
-//��or���Ԥ����һЩ���̼���ؽӿ�
+//库or框架预定义一些流程及相关接口
 class CoreApp
 {
 public:
 	virtual ~CoreApp() {}
 
-	//������ִ��
+	//按流程执行
 	void run() {
 		std::cout << "start run" << std::endl;
 		step1();
@@ -19,7 +19,7 @@ public:
 	}
 
 protected:
-	//����һϵ�е����̲���
+	//抽象一系列的流程步骤
 	void step1() {
 		std::cout << "CoreApp::step1" << std::endl;
 	}
@@ -28,7 +28,7 @@ protected:
 	//... ...
 };
 
-//��or���ʹ��������ʵ�ֲ���ϸ��
+//库or框架使用者重新实现部分细节
 class MyApp : public CoreApp
 {
 protected:
@@ -42,7 +42,7 @@ protected:
 	}
 };
 
-//����
+//测试
 static void testTemplateMethodPattern()
 {
 	CoreApp* app = new MyApp;

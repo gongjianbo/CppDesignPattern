@@ -17,6 +17,10 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 #启动项
 if (MSVC)
+	#指定为UTF8编码
+	add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+	add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /D_UNICODE /DUNICODE")
 	if (NOT ${CMAKE_VERSION} VERSION_LESS "3.6.0")
 		  set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
 	endif ()
