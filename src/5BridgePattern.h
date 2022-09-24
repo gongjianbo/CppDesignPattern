@@ -17,17 +17,13 @@ public:
 class ConcreteImplementationA : public Implementation
 {
 public:
-	void doing() const override {
-		std::cout << "ConcreteImplementation A doing" << std::endl;
-	}
+	void doing() const override {}
 };
 
 class ConcreteImplementationB : public Implementation
 {
 public:
-	void doing() const override {
-		std::cout << "ConcreteImplementation B doing" << std::endl;
-	}
+	void doing() const override {}
 };
 
 //接口基类
@@ -39,7 +35,6 @@ public:
 	virtual ~Abstraction() {}
 
 	virtual void doSome() const {
-		std::cout << "Abstraction doSome" << std::endl;
 		impl->doing();
 	}
 
@@ -66,14 +61,20 @@ void testBridgePattern()
 	//比较经典的例子还是组件和平台实现的IMPL demo
 	//如Window（用于外部访问的接口）+WindowImpl（底层各平台的具体实现）
 	//具体Window类（如ProWindow、LiteWindow）调用具体impl实现的接口（如PCWindowImpl、MobileWindowImpl）
+	std::cout << "construct ImplA" << std::endl;
 	Implementation* implementation = new ConcreteImplementationA;
+	std::cout << "set ImplA to Abstraction" << std::endl;
 	Abstraction* abstraction = new ExtendedAbstraction(implementation);
+	std::cout << "Abstraction doing,internal call ImplA doing" << std::endl;
 	abstraction->doSome();
 	delete implementation;
 	delete abstraction;
 
+	std::cout << "construct ImplB" << std::endl;
 	implementation = new ConcreteImplementationB;
+	std::cout << "set ImplB to Abstraction" << std::endl;
 	abstraction = new ExtendedAbstraction(implementation);
+	std::cout << "Abstraction doing,internal call ImplB doing" << std::endl;
 	abstraction->doSome();
 	delete implementation;
 	delete abstraction;
