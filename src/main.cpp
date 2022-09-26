@@ -6,6 +6,7 @@
 #include "5BridgePattern.h"
 #include "6FactoryMethodPattern.h"
 #include "7AbstractFactoryPattern.h"
+#include "8PrototypePattern.h"
 
 int main()
 {
@@ -15,7 +16,8 @@ int main()
 	//testDecoratorPattern();
 	//testBridgePattern();
 	//testFactoryMethodPattern();
-	testAbstractFactoryPattern();
+	//testAbstractFactoryPattern();
+	testPrototypePattern();
 
 	getchar();
 	return 0;
