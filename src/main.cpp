@@ -7,6 +7,7 @@
 #include "6FactoryMethodPattern.h"
 #include "7AbstractFactoryPattern.h"
 #include "8PrototypePattern.h"
+#include "9BuilderPattern.h"
 
 int main()
 {
@@ -17,7 +18,8 @@ int main()
 	//testBridgePattern();
 	//testFactoryMethodPattern();
 	//testAbstractFactoryPattern();
-	testPrototypePattern();
+	//testPrototypePattern();
+	testBuilderPattern();
 
 	getchar();
 	return 0;
