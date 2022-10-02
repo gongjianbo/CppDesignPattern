@@ -8,6 +8,8 @@
 #include "7AbstractFactoryPattern.h"
 #include "8PrototypePattern.h"
 #include "9BuilderPattern.h"
+#include "10SingletonPattern.h"
+#include "11FlyweightPattern.h"
 
 int main()
 {
@@ -19,7 +21,9 @@ int main()
 	//testFactoryMethodPattern();
 	//testAbstractFactoryPattern();
 	//testPrototypePattern();
-	testBuilderPattern();
+	//testBuilderPattern();
+	//testSingletonPattern();
+	testFlayweightPattern();
 
 	getchar();
 	return 0;
