@@ -10,6 +10,9 @@
 #include "9BuilderPattern.h"
 #include "10SingletonPattern.h"
 #include "11FlyweightPattern.h"
+#include "12FacadePattern.h"
+#include "13ProxyPattern.h"
+#include "14AdapterPattern.h"
 
 int main()
 {
@@ -23,7 +26,10 @@ int main()
 	//testPrototypePattern();
 	//testBuilderPattern();
 	//testSingletonPattern();
-	testFlayweightPattern();
+	//testFlayweightPattern();
+	//testFacadePattern();
+	//testProxyPattern();
+	testAdapterPattern();
 
 	getchar();
 	return 0;
