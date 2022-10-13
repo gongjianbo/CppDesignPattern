@@ -13,6 +13,7 @@
 #include "12FacadePattern.h"
 #include "13ProxyPattern.h"
 #include "14AdapterPattern.h"
+#include "15MediatorPattern.h"
 
 int main()
 {
@@ -29,7 +30,8 @@ int main()
 	//testFlayweightPattern();
 	//testFacadePattern();
 	//testProxyPattern();
-	testAdapterPattern();
+	//testAdapterPattern();
+	testMediatorPattern();
 
 	getchar();
 	return 0;
