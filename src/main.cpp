@@ -15,6 +15,7 @@
 #include "14AdapterPattern.h"
 #include "15MediatorPattern.h"
 #include "16StatePattern.h"
+#include "17MementoPattern.h"
 
 int main()
 {
@@ -33,7 +34,8 @@ int main()
 	//testProxyPattern();
 	//testAdapterPattern();
 	//testMediatorPattern();
-	testStatePattern();
+	//testStatePattern();
+	testMementoPattern();
 
 	getchar();
 	return 0;
