@@ -17,6 +17,7 @@
 #include "16StatePattern.h"
 #include "17MementoPattern.h"
 #include "18CompositePattern.h"
+#include "19IteratorPattern.h"
 
 int main()
 {
@@ -37,7 +38,8 @@ int main()
 	//testMediatorPattern();
 	//testStatePattern();
 	//testMementoPattern();
-	testCompositePattern();
+	//testCompositePattern();
+	testIteratorPattern();
 
 	getchar();
 	return 0;
