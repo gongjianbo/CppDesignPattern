@@ -18,6 +18,7 @@
 #include "17MementoPattern.h"
 #include "18CompositePattern.h"
 #include "19IteratorPattern.h"
+#include "20ChainOfResponsibilityPattern.h"
 
 int main()
 {
@@ -39,7 +40,8 @@ int main()
 	//testStatePattern();
 	//testMementoPattern();
 	//testCompositePattern();
-	testIteratorPattern();
+	//testIteratorPattern();
+	testChainOfResponsibilityPattern();
 
 	getchar();
 	return 0;
