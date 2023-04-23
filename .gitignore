@@ -4,4 +4,4 @@
 out/
 bin/
 
-#CMakeSettings.json
+CMakeSettings.json
