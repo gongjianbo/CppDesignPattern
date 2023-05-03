@@ -20,6 +20,8 @@
 #include "19IteratorPattern.h"
 #include "20ChainOfResponsibilityPattern.h"
 #include "21CommandPattern.h"
+#include "22VisitorPattern.h"
+#include "23InterpreterPattern.h"
 
 int main()
 {
@@ -43,7 +45,9 @@ int main()
 	//testCompositePattern();
 	//testIteratorPattern();
 	//testChainOfResponsibilityPattern();
-	testCommandPattern();
+	//testCommandPattern();
+	//testVisitorPattern();
+	testInterpreterPattern();
 
 	getchar();
 	return 0;
